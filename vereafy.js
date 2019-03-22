@@ -15,44 +15,27 @@ vereafy.apiKey = '' //api key goes in here
  * this request covers the initialization, resend and complete process
  * this uses a post method for the request
  */
-vereafy._api = (endPoint, jsonData)=>{
+vereafy._api = (endPoint, jsonData, method)=>{
     return new Promise(resolve=>{
-    let options = {
-        url: 'https://api.cecula.com/twofactor/'+endPoint,// cecula url
-        method: 'POST',
-        headers:{
-            "Content-Type": "application/json", 
-            "Accept": "application/json",
-            "Authorization": "Bearer "+vereafy.apiKey,
-            "cache-control": "no-cache"
-        },
-        json: jsonData
-    }
-    request(options, (error, res, data) => {
-            var resultObj = {}
-            resultObj = data
-            if(error){
-                resolve(error)
-                return;
+        if(method === 'GET'){
+            var options = {
+                url: 'https://api.cecula.com/account/'+endPoint,// cecula url
+                method: 'GET',
+                headers:{
+                "Authorization": "Bearer "+vereafy.apiKey
+                }
             }
-            // convert the response to an object if it didnt come as an object
-            let result = typeof resultObj === 'object' ? resultObj : JSON.parse(resultObj);
-            resolve(result)
-        });
-    })
-}
-/**
- * this is the request function for account balance, it takes just a parameter the endpont(url)
- * this uses a get method for the request
- */
-vereafy._balanceApi = (endPoint)=>{
-    return new Promise(resolve=>{
-        let options = {
-            url: 'https://api.cecula.com/account/'+endPoint,// cecula url
-            method: 'GET',
-            headers:{
-            "Authorization": "Bearer "+vereafy.apiKey,
-            "cache-control": "no-cache"
+        }else{
+            var options = {
+                url: 'https://api.cecula.com/twofactor/'+endPoint,// cecula url
+                method: 'POST',
+                headers:{
+                    "Content-Type": "application/json", 
+                    "Accept": "application/json",
+                    "Authorization": "Bearer "+vereafy.apiKey,
+                    "cache-control": "no-cache"
+                },
+                json: jsonData
             }
         }
     request(options, (error, res, data) => {
@@ -100,7 +83,7 @@ vereafy.complete = (dataObj, callback)=>{
 }
 
 vereafy.getBalance = (callback)=>{
-    vereafy._balanceApi('tfabalance').then(result=>{
+    vereafy._api('tfabalance', '', 'GET').then(result=>{
         callback(result)
     })
 }
