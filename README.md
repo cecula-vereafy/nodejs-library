@@ -18,7 +18,7 @@ This Vereafy Nodejs Library Project was created to enable nodejs developers inte
  * Install request
  * Replace the vereafy.apiKey with your api key inside the string
  * Require this file in your project file
- * Call any of the function you want to use in your file and put in the parameters and a callabck function
+ * Call any of the function you want to use in your file and put in the parameters and a callback function
  * The parameters are passed as dataObj and are inputed in a JSON format /({"mobile":"23470xxxxxx"})/
  
 ## Initialization
