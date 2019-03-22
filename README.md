@@ -99,7 +99,7 @@ In a case where the request fails due to one reason or another you should get an
 The table below shows a list of error codes and their descriptions
 
 | Error Code | Description     |
-|:---------:| --------------:|
+|:---------:| :--------------|
 | CE1001	| Missing Fields |
 | CE1002	| Empty Fields |
 | CE1006	| Not a Nigerian Number |
