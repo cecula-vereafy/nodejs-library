@@ -97,6 +97,19 @@ In a case where the request fails due to one reason or another you should get an
         }
 ```
 The table below shows a list of error codes and their descriptions
-| Error Code | Description |
-| :--------: | :--------: |
-| CE1001 | Missing Fields | 
+
+| Error Code | Description     |
+|:---------:| --------------:|
+| CE1001	| Missing Fields |
+| CE1002	| Empty Fields |
+| CE1006	| Not a Nigerian Number |
+| CE2000	| Invalid PIN Ref |
+| CE2002	| PIN does not reference any verification request| 
+| CE2003	| Mobile number does not match original request |
+| CE2001	| Invalid PIN |
+| CE2004	| Request Not Found |
+| CE7000	| Verification already succeeded |
+| CE7001	| Verification already failed |
+| CE6000	| Insufficient Balance |
+| CE5000	| Invalid Template ID |
+| CE5001	| Could not find referenced template |
