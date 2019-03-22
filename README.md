@@ -6,6 +6,7 @@
 - Resend
 - Completion
 - Get Balance
+- Error Responses
 
 ## Introduction:
 
@@ -83,6 +84,19 @@ This method requires no parameter: Replace the value of vereafy.apiKey with your
 The get balance method returns a response that should look like:
 ```sh
         {
-            "balance":200
+            "balance":800
         }
 ```
+
+## Error Responses
+In a case where the request fails due to one reason or another you should get an error response from the requested endpoint that looks like this:
+```sh
+        {
+            "error":"Invalid PIN Ref",
+            "code":"CE2000"
+        }
+```
+The table below shows a list of error codes and their descriptions
+| Error Code | Description |
+| :--------: | :--------: |
+| CE1001 | Missing Fields | 
