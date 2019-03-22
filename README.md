@@ -1,7 +1,8 @@
 # Vereafy Nodejs Library
 
 - Introduction
-- How to use
+- How to use the library
+- How to generate an API Key
 - Initialization
 - Resend
 - Completion
@@ -21,6 +22,10 @@ This Vereafy Nodejs Library Project was created to enable nodejs developers inte
  * Require this file in your project file
  * Call any of the function you want to use in your file and put in the parameters and a callback function
  * The parameters are passed as dataObj and are inputed in a JSON format /({"mobile":"23470xxxxxx"})/
+ 
+## How to generate an API Key
+Your API Key is first generated when you register an app. To register an app,
+Login to the Developers Dashboard, Navigate to Apps > Add, Type the name of your app and click *Submit*. The app will be registered and a new API Key will be generated. Copy the API key into your project
  
 ## Initialization
 The Vereafy 2fa initialization can be as simple as the following lines of code: Replace the values of sendData and vereafy.apiKey with your parameters
