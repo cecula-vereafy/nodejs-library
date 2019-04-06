@@ -1,13 +1,14 @@
 {
-  "name": "vereafy",
-  "version": "0.0.1",
+  "name": "cecula-vereafy",
+  "version": "1.0.2",
   "description": "A NodeJS Library for Vereafy Two-Factor Authentication 2FA Service",
+  "keywords": ["Vereafy", "Cecula", "Vereafy PHP", "Cecula PHP", "2FA", "TFA", "Two-Factor", "Authentication", "2-factor authentication", "two-factor authentication"],
   "main": "vereafy.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Eyituoyo Clinton",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "http": "0.0.0",
     "request": "^2.88.0"
