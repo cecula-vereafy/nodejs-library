@@ -14,7 +14,7 @@
     "2-factor authentication",
     "two-factor authentication"
   ],
-  "homepage": "https://www.cecula.com/vereafy",
+  "homepage": "https://www.vereafy.com",
   "main": "vereafy.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
