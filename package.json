@@ -1,7 +1,7 @@
 {
-  "name": "vereafy",
-  "version": "1.0.0",
-  "description": "",
+  "name": "cecula-vereafy",
+  "version": "1.0.1",
+  "description": "A NodeJS Library for Vereafy Two-Factor Authentication 2FA Service",
   "main": "vereafy.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
