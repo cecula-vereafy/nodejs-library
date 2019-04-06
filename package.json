@@ -1,6 +1,6 @@
 {
   "name": "vereafy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A NodeJS Library for Vereafy Two-Factor Authentication 2FA Service",
   "keywords": [
     "Vereafy",
