@@ -22,6 +22,16 @@ This Vereafy Nodejs Library Project was created to enable nodejs developers inte
  * Require this file in your project file
  * Call any of the function you want to use in your file and put in the parameters and a callback function
  * The parameters are passed as dataObj and are inputed in a JSON format /({"mobile":"23470xxxxxx"})/
+
+## Installation
+Install with NPM:
+```sh
+npm i vereafy
+```
+Install with Yarn:
+```sh
+yarn add vereafy
+```
  
 ## How to generate an API Key {#generating-api-key}
 Your API Key is first generated when you register an app. To register an app,
