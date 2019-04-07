@@ -1,6 +1,6 @@
 {
   "name": "vereafy",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A NodeJS Library for Cecula Vereafy Two-Factor Authentication 2FA Service",
   "keywords": [
     "Vereafy",
