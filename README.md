@@ -1,13 +1,13 @@
 # Vereafy Nodejs Library
 
-  [Introduction](#intro)
-  [How to use the library](#how-to-use)
-  [How to generate an API Key](#generating-api-key)
-  [Initialization](#initialization)
-  [Resend](#resending)
-  [Completion](#completion)
-  [Get Balance](#balance)
-  [Error Responses](#error-responses)
+  - [Introduction](#intro)
+  - [How to use the library](#how-to-use)
+  - [How to generate an API Key](#generating-api-key)
+  - [Initialization](#initialization)
+  - [Resend](#resending)
+  - [Completion](#completion)
+  - [Get Balance](#balance)
+  - [Error Responses](#error-responses)
 
 ## Introduction {#intro}
 
