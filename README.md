@@ -1,21 +1,21 @@
 # Vereafy Nodejs Library
 
-- Introduction
-- How to use the library
-- How to generate an API Key
-- Initialization
-- Resend
-- Completion
-- Get Balance
-- Error Responses
+  [Introduction](#intro)
+  [How to use the library](#how-to-use)
+  [How to generate an API Key](#generating-api-key)
+  [Initialization](#initialization)
+  [Resend](#resending)
+  [Completion](#completion)
+  [Get Balance](#balance)
+  [Error Responses](#error-responses)
 
-## Introduction:
+## Introduction {#intro}
 
 Vereafy is an SMS based 2-factor authentication services that uses machine learning to understand the causes of OTP delivery failures and resolves them instantly to ensure your login and sign up OTPs deliver.
 
 This Vereafy Nodejs Library Project was created to enable nodejs developers integrate seamlessly with the Vereafy API.
 
-## How to use this library
+## How to use this library {#how-to-use}
  * first download the file into your project directory
  * Install request
  * Replace the vereafy.apiKey with your api key inside the string
@@ -23,11 +23,11 @@ This Vereafy Nodejs Library Project was created to enable nodejs developers inte
  * Call any of the function you want to use in your file and put in the parameters and a callback function
  * The parameters are passed as dataObj and are inputed in a JSON format /({"mobile":"23470xxxxxx"})/
  
-## How to generate an API Key
+## How to generate an API Key {#generating-api-key}
 Your API Key is first generated when you register an app. To register an app,
 Login to the Developers Dashboard, Navigate to Apps > Add, Type the name of your app and click *Submit*. The app will be registered and a new API Key will be generated. Copy the API key into your project
  
-## Initialization
+## Initialization {#initialization}
 The Vereafy 2fa initialization can be as simple as the following lines of code: Replace the values of sendData and vereafy.apiKey with your parameters
 ```sh    
         vereafy.apiKey = "api_key";
@@ -40,11 +40,10 @@ The initialization method returns a response that should look like this:
  ```sh
         {
             "status":"success",
-            "pinRef": 1293488527
+            "pinRef": "1293488527"
         }
 ```
-
-## Resend
+## Resending {#resending}
 In a case where your app users get impatient and hits the retry link on your app form, just call the resend method this way: Replace the values of sendData and vereafy.apiKey with your parameters
  ```sh
         vereafy.apiKey = "api_key";
@@ -55,13 +54,12 @@ In a case where your app users get impatient and hits the retry link on your app
 ```
 The resend method returns a response that should look like this:
 ```sh
-        
         {
              "status": "success",
-             "pinRef": 1293488527
+             "pinRef": "1293488527"
         }
 ```
-## Completion
+## Completion {#completion}
 The Vereafy 2fa completion can be as simple as the following lines of code: Replace the values of sendData and vereafy.apiKey with your parameters
 ```sh
         vereafy.apiKey = "api_key";
@@ -77,7 +75,7 @@ The completion method returns a response that should look like this if the param
             "response":"success"
        }
 ```
-##  Get Balance
+##  Get Balance {#balance}
 To get your balance on Vereafy, the getbalance method is used this way:
 This method requires no parameter: Replace the value of vereafy.apiKey with your parameters
 ```sh
@@ -93,7 +91,7 @@ The get balance method returns a response that should look like:
         }
 ```
 
-## Error Responses
+## Error Responses {#error-responses}
 In a case where the request fails due to one reason or another you should get an error response from the requested endpoint that looks like this:
 ```sh
         {
