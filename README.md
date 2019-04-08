@@ -11,30 +11,62 @@
 
 ## Introduction:
 
-Vereafy is an SMS based 2-factor authentication services that uses machine learning to understand the causes of OTP delivery failures and resolves them instantly to ensure your login and sign up OTPs deliver.
+Vereafy is an SMS based 2-factor authentication service that uses machine learning to understand the causes of OTP delivery failures and resolves them instantly to ensure your login and sign up OTPs deliver.
 
 This Vereafy Nodejs Library Project was created to enable nodejs developers integrate seamlessly with the Vereafy API.
 
 ## How to use this library
- * first download the file into your project directory
- * Install request
- * Replace the vereafy.apiKey with your api key inside the string
- * Require this file in your project file
- * Call any of the function you want to use in your file and put in the parameters and a callback function
- * The parameters are passed as dataObj and are inputed in a JSON format /({"mobile":"23470xxxxxx"})/
- 
+* Install vereafy from npm or yarn following the instructions in the Installation section or clone from GitHub
+* Login to the Cecula Developers Platform register your app and generate an API KEY
+* Import/Require the library into your script
+
+## Installation
+
+Install with NPM:
+```sh
+    npm i vereafy
+```
+
+Install with Yarn:
+```sh
+    yarn add vereafy
+```
+
+Clone from GitHub
+
+```sh
+    git clone https://github.com/cecula-vereafy/nodejs-library.git
+```
+
 ## How to generate an API Key
 Your API Key is first generated when you register an app. To register an app,
 Login to the Developers Dashboard, Navigate to Apps > Add, Type the name of your app and click *Submit*. The app will be registered and a new API Key will be generated. Copy the API key into your project
+
+## Importing Vereafy Library
+If you installed the library using npm or yarn, import the library into your script using the code below
+
+```sh
+    const vereafy = require("vereafy");
+    vereafy.apiKey = "<API_KEY>"
+```
+
+Otherwise, if you cloned the library from GitHub, import the library into your script using the code below
+
+```sh
+    const vereafy = require("./path/to/vereafy");
+    vereafy.apiKey = "<API_KEY>"
+```
  
-## Initialization
-The Vereafy 2fa initialization can be as simple as the following lines of code: Replace the values of sendData and vereafy.apiKey with your parameters
+## Initializing 2FA
+The Vereafy 2fa initialization can be as simple as the following lines of code:
 ```sh    
-        vereafy.apiKey = "api_key";
-        var sendData = {"mobile":"mobile_number_to_be_verified"}
+        var sendData = {
+        "mobile": "23480xxxxxxxx"
+        };
+    
         vereafy.init(senData,(res)=>{
-            //res  will return a json as seen below
-        })
+            // If status is success show user form to type OTP
+        });
 ```
 The initialization method returns a response that should look like this:
  ```sh
@@ -44,14 +76,17 @@ The initialization method returns a response that should look like this:
         }
 ```
 
-## Resend
-In a case where your app users get impatient and hits the retry link on your app form, just call the resend method this way: Replace the values of sendData and vereafy.apiKey with your parameters
+## Resending OTP
+In a case where your app users get impatient and hits the retry link on your app form, just call the resend method this way:
  ```sh
-        vereafy.apiKey = "api_key";
-        var sendData = {"pinRef": "Your_pin_reference", "mobile":"mobile_number_to_be_verified"}
+        var sendData = {
+       "pinRef": "1293488527",
+       "mobile": "23480xxxxxxxx"
+        };
+        
         vereafy.resend(sendData, (res)=>{
-            //res  will return a json as seen below
-        })
+            // If status is success, show user form to type OTP
+        });
 ```
 The resend method returns a response that should look like this:
 ```sh
@@ -61,13 +96,15 @@ The resend method returns a response that should look like this:
              "pinRef": 1293488527
         }
 ```
-## Completion
-The Vereafy 2fa completion can be as simple as the following lines of code: Replace the values of sendData and vereafy.apiKey with your parameters
+## Completing 2FA
+The Vereafy 2fa completion can be as simple as the following lines of code:
 ```sh
-        vereafy.apiKey = "api_key";
-        var sendData = {"pinRef": "Your_pin_reference", "token":"verification_code"}
+        var sendData = {
+        "pinRef": "1293488527",
+        "token": "123456"
+        }
         vereafy.complete(sendData, (res)=>{
-            //res  will return a json as seen below
+            // Handle failure or success response
         })
 ```
 
@@ -77,13 +114,11 @@ The completion method returns a response that should look like this if the param
             "response":"success"
        }
 ```
-##  Get Balance
-To get your balance on Vereafy, the getbalance method is used this way:
-This method requires no parameter: Replace the value of vereafy.apiKey with your parameters
+##  Getting Balance
+To get your balance on Vereafy, the getBalance method is used this way: This method requires no parameter:
 ```sh
-        vereafy.apiKey = "api_key";
         vereafy.getBalance((res)=>{
-            //res  will return a json as seen below
+        // Do Something
         })
 ```
 The get balance method returns a response that should look like:

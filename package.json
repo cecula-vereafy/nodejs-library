@@ -1,7 +1,7 @@
 {
   "name": "vereafy",
   "version": "0.0.1",
-  "description": "",
+  "description": "Vereafy is an SMS based 2-factor authentication service that uses machine learning to understand the causes of OTP delivery failures and resolves them instantly to ensure your login and sign up OTPs deliver.",
   "main": "vereafy.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,5 +19,18 @@
   "bugs": {
     "url": "https://github.com/cecula-vereafy/nodejs-library/issues"
   },
-  "homepage": "https://github.com/cecula-vereafy/nodejs-library#readme"
+  "homepage": "https://github.com/cecula-vereafy/nodejs-library#readme",
+  "keywords": [
+    "two fa authentication",
+    "2fa authentication",
+    "2-factor authentication",
+    "two factor authentication",
+    "two-factor authentication",
+    "Vereafy NodeJS",
+    "vereafy",
+    "cecula",
+    "cecula nodejs",
+    "2fa",
+    "tfa"
+  ]
 }
