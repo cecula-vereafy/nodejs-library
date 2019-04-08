@@ -38,7 +38,7 @@ This Vereafy Nodejs Library Project was created to enable nodejs developers inte
 
 * Install vereafy from npm or yarn following the instructions in the Installation section or clone from GitHub
 
-* Login to the Cecula Developers Platform register your app and generate an API KEY
+* Login to the <a href="https://developer.cecula.com/" target="_blank">Cecula Developers Platform</a> register your app and generate an API KEY
 
 * Import/Require the library into your script
 
