@@ -4,6 +4,7 @@
   - [How to use the library](#how-to-use-this-library)
   - [Installation](#installation)
   - [How to generate an API Key](#how-to-generate-an-api-key)
+  - [Importing Vereafy Library](#importing-vereafy-library)
   - [Initializating 2FA](#initializing-2fa)
   - [Resending OTP](#resending-otp)
   - [Completing 2FA](#completing-2fa)
@@ -18,7 +19,7 @@ The Vereafy Nodejs Library Project was created to enable nodejs developers integ
 
 ## How to use this library
  * Install vereafy from npm or yarn following the instructions in the Installation section or clone from GitHub
- * Login to the [Cecula Developers Platform](https://developer.cecula.com) register your app and generate an API KEY
+ * Login to the <a href="https://developer.cecula.com" target="_blank">Cecula Developers Platform</a> register your app and generate an API KEY
  * Import/Require the library into your script
 
 ## Installation
@@ -37,7 +38,7 @@ git clone https://github.com/cecula-vereafy/nodejs-library.git
  
 ## How to generate an API Key
 Your API Key is first generated when you register an app. To register an app,
-Login to the Developers Dashboard, __Navigate to Apps > Add__, Type the name of your app and click *Submit*. The app will be registered and a new API Key will be generated. Copy the API key into your project
+<a href="https://developer.cecula.com" target="_blank">Login to the Developers Dashboard</a>, __Navigate to Apps > Add__, Type the name of your app and click *Submit*. The app will be registered and a new API Key will be generated. Copy the API key into your project
 
 ## Importing Vereafy Library
 If you installed the library using npm or yarn, import the library into your script using the code below
