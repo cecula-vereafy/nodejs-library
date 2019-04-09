@@ -34,5 +34,22 @@
   "dependencies": {
     "http": "0.0.0",
     "request": "^2.88.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/cecula-vereafy/nodejs-library/issues"
+  },
+  "homepage": "https://github.com/cecula-vereafy/nodejs-library#readme",
+  "keywords": [
+    "two fa authentication",
+    "2fa authentication",
+    "2-factor authentication",
+    "two factor authentication",
+    "two-factor authentication",
+    "Vereafy NodeJS",
+    "vereafy",
+    "cecula",
+    "cecula nodejs",
+    "2fa",
+    "tfa"
+  ]
 }
