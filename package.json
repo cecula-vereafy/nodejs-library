@@ -1,44 +1,7 @@
 {
   "name": "vereafy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A NodeJS Library for Cecula Vereafy Two-Factor Authentication 2FA Service",
-  "keywords": [
-    "Vereafy",
-    "Cecula",
-    "Vereafy NodeJS",
-    "Cecula NodeJS",
-    "2FA",
-    "TFA",
-    "Two-Factor",
-    "Authentication",
-    "2-factor authentication",
-    "two-factor authentication"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/cecula-vereafy/nodejs-library.git"
-  },
-  "bugs": {
-    "url": "https://github.com/cecula-vereafy/nodejs-library/issues"
-  },
-  "homepage": "https://www.vereafy.com",
-  "main": "vereafy.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": {
-    "name": "Clinton Eyituoyo",
-    "email": "eyituoyo.clinton@cecula.com"
-  },
-  "license": "ISC",
-  "dependencies": {
-    "http": "0.0.0",
-    "request": "^2.88.0"
-  },
-  "bugs": {
-    "url": "https://github.com/cecula-vereafy/nodejs-library/issues"
-  },
-  "homepage": "https://github.com/cecula-vereafy/nodejs-library#readme",
   "keywords": [
     "two fa authentication",
     "2fa authentication",
@@ -51,5 +14,26 @@
     "cecula nodejs",
     "2fa",
     "tfa"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cecula-vereafy/nodejs-library.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cecula-vereafy/nodejs-library/issues"
+  },
+  "homepage": "https://github.com/cecula-vereafy/nodejs-library#readme",
+  "main": "vereafy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Clinton Eyituoyo",
+    "email": "eyituoyo.clinton@cecula.com"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "http": "0.0.0",
+    "request": "^2.88.0"
+  }
 }
