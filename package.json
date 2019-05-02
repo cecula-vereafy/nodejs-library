@@ -1,6 +1,6 @@
 {
   "name": "vereafy",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A NodeJS Library for Cecula Vereafy Two-Factor Authentication 2FA Service",
   "keywords": [
     "two fa authentication",
@@ -34,5 +34,15 @@
   "license": "ISC",
   "dependencies": {
     "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^7.0.0",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-standard": "^4.0.0",
+    "mocha": "^6.1.4"
   }
 }
