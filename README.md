@@ -1,5 +1,8 @@
 # Vereafy NodeJS Library
 
+[![Build Status](https://travis-ci.org/cecula-vereafy/nodejs-library.svg?branch=master)](https://travis-ci.org/cecula-vereafy/nodejs-library)
+
+
 ## Table of Content
 1.  [Introduction](#introduction)
 2.  [How to use the library](#how-to-use-this-library)
@@ -68,11 +71,7 @@ The Vereafy 2fa initialization can be as simple as the following lines of code:
     });
 ```
 
-  
-
 Otherwise, if you cloned the library from GitHub, import the library into your script using the code below
-
-  
 
 ```sh
 
@@ -109,6 +108,7 @@ The initialization method returns a response that should look like this:
         "pinRef": "1293488527"
     }
 ```
+
 ## Resending OTP
 In a case where your app users get impatient and hits the retry link on your app form, just call the resend method this way:
  ```sh
@@ -130,6 +130,7 @@ The resend method returns a response that should look like this:
         "pinRef": "1293488527"
     }
 ```
+
 ## Completing 2FA
 The Vereafy 2fa completion can be as simple as the following lines of code:
 ```sh
@@ -142,8 +143,6 @@ The Vereafy 2fa completion can be as simple as the following lines of code:
     })
 ```
 
-  
-
 The completion method returns a response that should look like this if the parameters are correct:
 
 ```sh
@@ -151,6 +150,7 @@ The completion method returns a response that should look like this if the param
         "response": "success"
     }
 ```
+
 ##  Getting Balance
 To get your balance on Vereafy, the getBalance method is used this way:
 This method requires no parameter:
@@ -168,8 +168,6 @@ The get balance method returns a response that should look like:
     }
 ```
 
-  
-
 ## Error Responses
 
 In a case where the request fails due to one reason or another you should get an error response from the requested endpoint that looks like this:
@@ -181,8 +179,6 @@ In a case where the request fails due to one reason or another you should get an
         }
 ```
 The table below shows a list of error codes and their descriptions:
-
-  
 
 | Error Code | Description                                     |
 |:----------:| :----------------------------------------------:|
