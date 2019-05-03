@@ -1,15 +1,16 @@
 # Vereafy NodeJS Library
 
-  - [Introduction](#introduction)
-  - [How to use the library](#how-to-use-this-library)
-  - [Installation](#installation)
-  - [How to generate an API Key](#how-to-generate-an-api-key)
-  - [Importing Vereafy Library](#importing-vereafy-library)
-  - [Initializating 2FA](#initializing-2fa)
-  - [Resending OTP](#resending-otp)
-  - [Completing 2FA](#completing-2fa)
-  - [Getting Balance](#getting-balance)
-  - [Error Responses](#error-responses)
+## Table of Content
+1.  [Introduction](#introduction)
+2.  [How to use the library](#how-to-use-this-library)
+3.  [Installation](#installation)
+4.  [How to generate an API Key](#how-to-generate-an-api-key)
+5.  [Importing Vereafy Library](#importing-vereafy-library)
+6.  [Initializating 2FA](#initializing-2fa)
+7.  [Resending OTP](#resending-otp)
+8.  [Completing 2FA](#completing-2fa)
+9.  [Getting Balance](#getting-balance)
+10. [Error Responses](#error-responses)
 
 ## Introduction
 
@@ -20,9 +21,9 @@ The Vereafy Nodejs Library Project was created to enable nodejs developers integ
   
 
 ## How to use this library
- * Install vereafy from npm or yarn following the instructions in the Installation section or clone from GitHub
- * Login to the <a href="https://developer.cecula.com" target="_blank">Cecula Developers Platform</a> register your app and generate an API KEY
- * Import/Require the library into your script
+*  Install vereafy from npm or yarn following the instructions in the Installation section or clone from GitHub
+*  Login to the <a href="https://developer.cecula.com" target="_blank">Cecula Developers Platform</a> register your app and generate an API KEY
+*  Import/Require the library into your script
 
 ## Installation
 Install with NPM:
@@ -183,32 +184,18 @@ The table below shows a list of error codes and their descriptions:
 
   
 
-| Error Code | Description |
-
-|:---------:| :--------------|
-
-| CE1001 | Missing Fields |
-
-| CE1002 | Empty Fields |
-
-| CE1006 | Not a Nigerian Number |
-
-| CE2000 | Invalid PIN Ref |
-
-| CE2002 | PIN does not reference any verification request|
-
-| CE2003 | Mobile number does not match original request |
-
-| CE2001 | Invalid PIN |
-
-| CE2004 | Request Not Found |
-
-| CE7000 | Verification already succeeded |
-
-| CE7001 | Verification already failed |
-
-| CE6000 | Insufficient Balance |
-
-| CE5000 | Invalid Template ID |
-
-| CE5001 | Could not find referenced template |
+| Error Code | Description                                     |
+|:----------:| :----------------------------------------------:|
+| CE1001     | Missing Fields                                  |
+| CE1002     | Empty Fields                                    |
+| CE1006     | Not a Nigerian Number                           |
+| CE2000     | Invalid PIN Ref                                 |
+| CE2002     | PIN does not reference any verification request |
+| CE2003     | Mobile number does not match original request   |
+| CE2001     | Invalid PIN                                     |
+| CE2004     | Request Not Found                               |
+| CE7000     | Verification already succeeded                  |
+| CE7001     | Verification already failed                     |
+| CE6000     | Insufficient Balance                            |
+| CE5000     | Invalid Template ID                             |
+| CE5001     | Could not find referenced template              |

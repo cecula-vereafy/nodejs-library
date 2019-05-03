@@ -25,7 +25,11 @@
   "homepage": "https://github.com/cecula-vereafy/nodejs-library#readme",
   "main": "vereafy.js",
   "scripts": {
-    "test": "mocha || true"
+    "test": "mocha || true",
+    "lint-md": "remark ."
+  },
+  "remarkConfig": {
+    "plugins": []
   },
   "author": {
     "name": "Clinton Eyituoyo",
@@ -36,13 +40,17 @@
     "request": "^2.88.0"
   },
   "devDependencies": {
+    "remark-cli": "^6.0.1",
+    "remark-preset-lint-recommended": "^3.0.2",
     "chai": "^4.2.0",
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-node": "^7.0.0",
+    "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.0",
     "eslint-plugin-standard": "^4.0.0",
-    "mocha": "^6.1.4"
+    "mocha": "^6.1.4",
+    "remark-lint": "^6.0.4",
+    "remark-stringify": "^6.0.4"
   }
 }
