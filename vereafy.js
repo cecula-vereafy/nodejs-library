@@ -58,7 +58,7 @@ vereafy._api = (endPoint, jsonData, method) => {
  * it requires the mobile number you want to initialize in a json format
  */
 vereafy.init = (dataObj, callback) => {
-    vereafy._api("init", dataObj).then(result => {
+    vereafy._api("init", dataObj).then((result) => {
         callback(result);
     });
 };
@@ -68,7 +68,7 @@ vereafy.init = (dataObj, callback) => {
  * it requires pinReference and mobile number you want to resend the code to in a json format
  */
 vereafy.resend = (dataObj, callback) => {
-    vereafy._api("resend", dataObj).then(result => {
+    vereafy._api("resend", dataObj).then((result) => {
         callback(result);
     });
 };
@@ -78,13 +78,13 @@ vereafy.resend = (dataObj, callback) => {
  * it requires the pinReference and token in a json format
  */
 vereafy.complete = (dataObj, callback) => {
-    vereafy._api("complete", dataObj).then(result => {
+    vereafy._api("complete", dataObj).then((result) => {
         callback(result);
     });
 };
 
 vereafy.getBalance = (callback) => {
-    vereafy._api("tfabalance", "", "GET").then(result => {
+    vereafy._api("tfabalance", "", "GET").then((result) => {
         callback(result);
     });
 };
