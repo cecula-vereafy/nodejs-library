@@ -68,37 +68,6 @@ The Vereafy 2fa initialization can be as simple as the following lines of code:
         // If status is success show user form to type OTP
     });
 ```
-
-Otherwise, if you cloned the library from GitHub, import the library into your script using the code below
-
-```sh
-
-const vereafy = require("./path/to/vereafy");
-
-vereafy.apiKey = "<API_KEY>"
-
-```
-
-## Initializing 2FA
-
-The Vereafy 2fa initialization can be as simple as the following lines of code:
-
-```sh
-
-var sendData = {
-
-"mobile": "23480xxxxxxxx"
-
-};
-
-vereafy.init(senData,(res)=>{
-
-// If status is success show user form to type OTP
-
-});
-
-```
-
 The initialization method returns a response that should look like this:
  ```sh
     {
