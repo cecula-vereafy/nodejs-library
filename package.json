@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/cecula-vereafy/nodejs-library/issues"
   },
-  "homepage": "https://github.com/cecula-vereafy/nodejs-library#readme",
+  "homepage": "https://www.cecula.com/vereafy",
   "main": "vereafy.js",
   "scripts": {
     "test": "mocha || true",
