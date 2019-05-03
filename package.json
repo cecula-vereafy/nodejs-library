@@ -29,7 +29,7 @@
     "lint-md": "remark ."
   },
   "remarkConfig": {
-    "plugins": []
+    "plugins": ["remark-preset-lint-recommended"]
   },
   "author": {
     "name": "Clinton Eyituoyo",

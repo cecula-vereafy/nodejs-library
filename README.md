@@ -1,7 +1,7 @@
-# Vereafy NodeJS Library
+# Vereafy
+A Node JS package for Cecula Vereafy.
 
 [![Build Status](https://travis-ci.org/cecula-vereafy/nodejs-library.svg?branch=master)](https://travis-ci.org/cecula-vereafy/nodejs-library)
-
 
 ## Table of Content
 1.  [Introduction](#introduction)
@@ -21,12 +21,10 @@ Vereafy is an SMS based 2-factor authentication service that uses machine learni
 
 The Vereafy Nodejs Library Project was created to enable nodejs developers integrate seamlessly with the Vereafy API.
 
-  
-
 ## How to use this library
-*  Install vereafy from npm or yarn following the instructions in the Installation section or clone from GitHub
-*  Login to the <a href="https://developer.cecula.com" target="_blank">Cecula Developers Platform</a> register your app and generate an API KEY
-*  Import/Require the library into your script
+*   Install vereafy from npm or yarn following the instructions in the Installation section or clone from GitHub
+*   Login to the <a href="https://developer.cecula.com" target="_blank">Cecula Developers Platform</a> register your app and generate an API KEY
+*   Import/Require the library into your script
 
 ## Installation
 Install with NPM:
@@ -151,7 +149,7 @@ The completion method returns a response that should look like this if the param
     }
 ```
 
-##  Getting Balance
+## Getting Balance
 To get your balance on Vereafy, the getBalance method is used this way:
 This method requires no parameter:
 ```sh
