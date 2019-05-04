@@ -3,9 +3,10 @@ A Node JS package for Cecula Vereafy.
 
 [![NPM](https://nodei.co/npm/vereafy.png)](https://nodei.co/npm/vereafy/)
 
-[![npm version](https://badge.fury.io/js/vereafy.svg)](https://badge.fury.io/js/vereafy)
 [![Build Status](https://travis-ci.org/cecula-vereafy/nodejs-library.svg?branch=master)](https://travis-ci.org/cecula-vereafy/nodejs-library)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/72e1aefb08e74dd48733b45045e6e7e3)](https://www.codacy.com/app/godwin-noah/nodejs-library?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cecula-vereafy/nodejs-library&amp;utm_campaign=Badge_Grade)
+[![codecov](https://codecov.io/gh/cecula-vereafy/nodejs-library/branch/master/graph/badge.svg)](https://codecov.io/gh/cecula-vereafy/nodejs-library)
+[![Known Vulnerabilities](https://snyk.io/test/github/cecula-vereafy/nodejs-library/badge.svg)](https://snyk.io/test/github/cecula-vereafy/nodejs-library) 
 
 ## Table of Content
 1.  [Introduction](#introduction)
