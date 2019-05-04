@@ -15,39 +15,32 @@ vereafy.apiKey = ""; // api key goes in here
  * this request covers the initialization, resend and complete process
  * this uses a post method for the request
  */
-vereafy._api = (endPoint, jsonData, method) => {
+vereafy._api = (endPoint, jsonData, requestMethod, timeoutLimit = 30000) => {
     return new Promise((resolve, reject) => {
-        var options = {};
-        if (method === "GET") {
-            options = {
-                url: "https://api.cecula.com/account/" + endPoint, // cecula url
-                method: "GET",
-                headers: {
-                    "Authorization": "Bearer " + vereafy.apiKey
-                }
-            };
-        } else {
-            options = {
-                url: "https://api.cecula.com/twofactor/" + endPoint, // cecula url
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Accept": "application/json",
-                    "Authorization": "Bearer " + vereafy.apiKey,
-                    "cache-control": "no-cache"
-                },
-                json: jsonData
-            };
+        var options = {
+            url: "https://api.cecula.com/" + endPoint, // cecula url
+            method: requestMethod,
+            headers: {
+                "Authorization": "Bearer " + vereafy.apiKey,
+                "cache-control": "no-cache"
+            },
+            timeout: timeoutLimit
+        };
+
+        if (["POST", "PUT", "OPTIONS", "PATCH"].indexOf(requestMethod) > -1) {
+            options.headers.Accept = "application/json";
+            options.headers["Content-Type"] = "application/json";
+            options.json = jsonData;
         }
+
         request(options, (error, res, data) => {
-            var resultObj = {};
-            resultObj = data;
             if (error) {
                 resolve(error);
                 return;
             }
+
             // convert the response to an object if it didnt come as an object
-            let result = typeof resultObj === "object" ? resultObj : JSON.parse(resultObj);
+            let result = typeof data === "object" ? data : JSON.parse(data);
             resolve(result);
         });
     });
@@ -58,8 +51,8 @@ vereafy._api = (endPoint, jsonData, method) => {
  * it requires the mobile number you want to initialize in a json format
  */
 vereafy.init = (dataObj, callback) => {
-    vereafy._api("init", dataObj).then((result) => {
-        callback(result);
+    vereafy._api("twofactor/init", dataObj, "POST").then((result) => {
+        return callback(result);
     });
 };
 
@@ -68,7 +61,7 @@ vereafy.init = (dataObj, callback) => {
  * it requires pinReference and mobile number you want to resend the code to in a json format
  */
 vereafy.resend = (dataObj, callback) => {
-    vereafy._api("resend", dataObj).then((result) => {
+    return vereafy._api("twofactor/resend", dataObj, "POST").then((result) => {
         callback(result);
     });
 };
@@ -78,13 +71,13 @@ vereafy.resend = (dataObj, callback) => {
  * it requires the pinReference and token in a json format
  */
 vereafy.complete = (dataObj, callback) => {
-    vereafy._api("complete", dataObj).then((result) => {
+    return vereafy._api("twofactor/complete", dataObj, "POST").then((result) => {
         callback(result);
     });
 };
 
 vereafy.getBalance = (callback) => {
-    vereafy._api("tfabalance", "", "GET").then((result) => {
+    return vereafy._api("account/tfabalance", "", "GET").then((result) => {
         callback(result);
     });
 };

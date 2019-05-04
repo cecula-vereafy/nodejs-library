@@ -27,6 +27,13 @@ describe("Vereafy", function () {
         });
     });
 
+    it("Returns Request Error", function () {
+        vereafy._api("tfabalance", "", "GET", 1)
+            .then((resp) => {
+                assert.instanceOf(resp, Error);
+            });
+    });
+
     // Test with Sandbox API Key
     it("API Key is 44 characters long", function () {
         assert.lengthOf(sandboxApiKey, 44);
@@ -64,6 +71,20 @@ describe("Vereafy", function () {
         vereafy.apiKey = sandboxApiKey;
         vereafy.init({ "mobile": "124062140" }, (data) => {
             assert.equal(data.code, "CE1006");
+        });
+    });
+
+    it("2FA Resend endpoint", function () {
+        vereafy.apiKey = sandboxApiKey;
+        vereafy.resend({ "pinRef": "124062140", "mobile": "2349090000246" }, (data) => {
+            assert.equal(data.code, "CE2002");
+        });
+    });
+
+    it("2FA Completion endpoint", function () {
+        vereafy.apiKey = sandboxApiKey;
+        vereafy.complete({ "pinRef": "124062140", "token": "287363" }, (data) => {
+            assert.equal(data.code, "CE2004");
         });
     });
 });
